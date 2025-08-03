@@ -1,5 +1,9 @@
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -8,20 +12,217 @@ body {
   min-height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  display: flex;
+  justify-content: center;
+
+  min-height: 100vh;
+  max-width: 1440px;
+  padding: 112px 0;
+  background-color: #ffffff;
 }
 
-.credits {
-  color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
-  text-align: center;
+.button-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
-.credits a {
-  color: #000;
-  font-weight: bold;
+.button-variants__sizes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  background: none;
+
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(68, 76, 231, 0.12);
+}
+
+.button--primary {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06), 0 1px 3px 0 rgb(0 0 0 / 0.10);
+  background-color: #4338ca;
+  color: #ffffff;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #3730a3;
+}
+
+.button--secondary {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06), 0 1px 3px 0 rgb(0 0 0 / 0.10);
+  border: 0.5px solid #e5e5e5;
+  background-color: #ffffff;
+  color: #171717;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  color: #0a0a0a;
+}
+
+.button--tertiary,
+.button--link {
+  color: #4338ca;
+}
+
+.button--tertiary:hover,
+.button--tertiary:focus {
+  background-color: #fafafa;
+}
+
+.button--link:hover,
+.button--link:focus {
+  color: #3730a3;;
+}
+
+.button--tertiary:disabled,
+.button--link:disabled {
+  color: #a3a3a3;
+}
+
+.button--link-gray {
+  color: #525252;
+}
+
+.button--link-gray:hover,
+.button--link-gray:focus {
+  color: #171717;
+}
+
+.button--destructive {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.button--destructive:hover,
+.button--destructive:focus {
+  background-color: #b91c1c;
+}
+
+.button--primary:disabled,
+.button--secondary:disabled,
+.button--destructive:disabled {
+  background-color: #f5f5f5;
+  color: #a3a3a3;
+}
+
+.button--size-md {
+  column-gap: 4px;
+  width: 107px;
+  height: 40px;
+  padding: 10px 14px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button--size-lg {
+  column-gap: 6px;
+  width: 148px;
+  height: 44px;
+  padding: 10px 16px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button--size-xl {
+  column-gap: 6px;
+  width: 156px;
+  height: 48px;
+  padding: 12px 20px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button--size-2xl {
+  column-gap: 10px;
+  width: 148px;
+  height: 60px;
+  padding: 16px 24px;
+
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.button--tertiary.button--size-2xl {
+  column-gap: 6px;
+  width: 130px;
+  height: 48px;
+  padding: 12px 20px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button--link.button--size-md {
+  column-gap: 4px;
+  width: 79px;
+  height: 20px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button--link.button--size-lg,
+.button--link.button--size-xl {
+  column-gap: 6px;
+  width: 116px;
+  height: 24px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button--link.button--size-2xl {
+  column-gap: 10px;
+  width: 100px;
+  height: 28px;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+.button--icon--size-2xl {
+  column-gap: 8px;
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 112px 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 112px 24px;
+  }
 }
