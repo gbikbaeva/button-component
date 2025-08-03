@@ -207,6 +207,11 @@ body {
   line-height: 28px;
 }
 
+.button--link.button--icon--size-2xl {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
 
 .button--icon--size-2xl {
   column-gap: 8px;
